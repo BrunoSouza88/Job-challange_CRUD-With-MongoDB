@@ -42,9 +42,11 @@ Follow these steps to set up and run the project locally:
 
   <li>Start the server:</li>
 
-  <pre><code>npm start</code></pre>
+  <pre><code>npm run dev</code></pre>
+  
+  <li>Access the application in your browser at: <code>http://localhost:4200/</code></li>
 
-  <li>Access the application in your browser at <code>http://localhost:4200/</code> 🌐.</li>
+  <li>Or if you just want to see the API in action, access: <code>http://localhost:3000/</code></li>
 </ol>
 
 The application provides a user-friendly interface to manage entities through the following operations:

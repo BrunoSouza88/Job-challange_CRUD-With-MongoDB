@@ -23,6 +23,7 @@ const TasksSchema = new mongoose.Schema({
   },
 });
 
+// If you want to use a taskId autoincrement, uncomment the commented lines:
 // TasksSchema.plugin(autoIncrement.plugin, { model: 'Task', field: 'taskId' });
 
 const Tasks = mongoose.model('Task', TasksSchema);

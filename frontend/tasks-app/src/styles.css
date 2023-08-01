@@ -1,1 +1,173 @@
-/* You can add global styles to this file, and also import other style files */
+/* styles.css */
+
+body {
+  font-family: sans-serif, Arial;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+form {
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 200px;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+  background-color: #555;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #333;
+  color: #fff;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.edit-button,
+.delete-button,
+#edit-submit,
+[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #979494;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.edit-button:hover,
+.delete-button:hover,
+#edit-submit:hover,
+[type="submit"]:hover {
+  background-color: #555;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li,
+ol li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.task-item {
+  margin-bottom: 10px;
+}
+
+.task-title,
+.task-description {
+  margin-right: 10px;
+}
+
+#title-column,
+#description-column,
+#status-column,
+#actions-column {
+  width: 25%;
+}
+
+@media (max-width: 1024px) {
+  input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #task-form,
+  #edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #task-form button,
+  #edit-form button {
+    margin-top: 10px;
+  }
+}
+
+.highlight-background {
+  background-color: yellow;
+}
+
+.highlight {
+  animation: highlight 1s;
+}
+
+@keyframes highlight {
+  from {
+    background-color: yellow;
+  }
+  to {
+    background-color: white;
+  }
+}
+
+@media (max-width: 768px) {
+  table,
+  th,
+  td {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 12px;
+  }
+
+  th,
+  td {
+    padding: 3px;
+  }
+}

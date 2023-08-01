@@ -1,10 +1,13 @@
-const app = require('express');
-const Router = require('express');
+const express = require('express');
+const { healthCheck, allTasks, newTask, deletedTask, updatedTask, getOneTask } = require('../controllers/tasksControllers');
 
-const TaskRoutes = app.Router();
+const TaskRoutes = express.Router();
 
-TaskRoutes.get('/', (_req, res) => {
-  res.status(200).json({ message: 'Hello World' });
-})
+TaskRoutes.get('/', healthCheck);
+TaskRoutes.get('/tasks', allTasks);
+TaskRoutes.post('/tasks', newTask);
+TaskRoutes.get('/tasks/:id', getOneTask);
+TaskRoutes.delete('/tasks/:id', deletedTask);
+TaskRoutes.put('/tasks/:id', updatedTask);
 
 module.exports = TaskRoutes;
